@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Webpage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Interactive Webpage</h1>
+  </header>
+
+  <!-- Dropdown Menu -->
+  <nav>
+    <button id="menuBtn">☰ Menu</button>
+    <ul id="dropdownMenu" class="hidden">
+      <li><a href="#form">Contact Form</a></li>
+      <li><a href="#counter">Counter</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#tabs">Tabbed Section</a></li>
+      <li><a href="#toggle">Theme Toggle</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Contact Form -->
+    <section id="form">
+      <h2>Contact Form</h2>
+      <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name">
+        <small class="error" id="nameError"></small>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" placeholder="Enter your email">
+        <small class="error" id="emailError"></small>
+
+        <label for="message">Message:</label>
+        <textarea id="message" placeholder="Write your message"></textarea>
+        <small class="error" id="messageError"></small>
+
+        <button type="submit">Submit</button>
+      </form>
+      <p id="formSuccess" class="success"></p>
+    </section>
+
+    <!-- Counter -->
+    <section id="counter">
+      <h2>Interactive Counter Game</h2>
+      <p id="countValue">0</p>
+      <button id="increaseBtn">Increase</button>
+      <button id="decreaseBtn">Decrease</button>
+      <button id="resetBtn">Reset</button>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <button class="faq-question">What is this site about?</button>
+        <div class="faq-answer">It’s a demo webpage to showcase JavaScript interactivity.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How does the counter work?</button>
+        <div class="faq-answer">You can increase, decrease, or reset the number by clicking the buttons.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Can I use this code?</button>
+        <div class="faq-answer">Yes, you are free to use and modify the code for learning purposes.</div>
+      </div>
+    </section>
+
+    <!-- Tabbed Interface -->
+    <section id="tabs">
+      <h2>Tabbed Interface</h2>
+      <div class="tab-buttons">
+        <button class="tab-btn active" data-tab="tab1">Tab 1</button>
+        <button class="tab-btn" data-tab="tab2">Tab 2</button>
+        <button class="tab-btn" data-tab="tab3">Tab 3</button>
+      </div>
+      <div class="tab-content">
+        <div id="tab1" class="tab-panel active">This is content for Tab 1.</div>
+        <div id="tab2" class="tab-panel">This is content for Tab 2.</div>
+        <div id="tab3" class="tab-panel">This is content for Tab 3.</div>
+      </div>
+    </section>
+
+    <!-- Theme Toggle -->
+    <section id="toggle">
+      <h2>Theme Toggle</h2>
+      <button id="themeBtn">Switch to Dark Mode</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
